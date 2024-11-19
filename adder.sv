@@ -1,8 +1,12 @@
 `timescale 1ns / 1ps
 
-module adder #(parameter WIDTH = 8) (  		
-  input wire [WIDTH-1:0] a, b,
-  output wire [WIDTH-1:0] result
+module adder #(parameter WIDTH = 8)(
+    output [(WIDTH - 1): 0] result,
+    output carry_out,
+    input [(WIDTH - 1): 0] a,
+    input [(WIDTH - 1): 0] b
 );
-  assign result = a + b;
+ 
+assign {carry_out, result} = a + b;
+ 
 endmodule
