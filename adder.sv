@@ -7,6 +7,7 @@ module adder #(parameter WIDTH = 8)(
     input [(WIDTH - 1): 0] b
 );
  
-assign {carry_out, result} = a + b;
+assign {carry_out, result} = a + b
  
 endmodule
+
